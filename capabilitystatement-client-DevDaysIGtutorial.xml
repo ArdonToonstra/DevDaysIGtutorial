@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/STU3/capabilitystatement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/capabilitystatement.xsd">
+  <url value="http://nictiz.nl/fhir/CapabilityStatement/DevDaysIGtutorial-clientcapabilities" />
+  <version value="1.0" />
+  <name value="DevDaysIGtutorial-client" />
+  <status value="active" />
+  <date value="2017-09-25" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This CapabilityStatement describes the minimal requirements for a client." />
+  <copyright value="CC0" />
+  <kind value="requirements" />
+  <fhirVersion value="3.0.1" />
+  <acceptUnknown value="both" />
+  <format value="xml" />
+  <format value="json" />
+  <profile>
+    <reference value="http://example.nl/fhir/StructureDefinition/DevDaysIGtutorial-DiagnosticReport" />
+  </profile>
+  <profile>
+    <reference value="http://example.nl/fhir/StructureDefinition/DevDaysIGtutorial-Observation" />
+  </profile>
+  <profile>
+    <reference value="http://example.nl/fhir/StructureDefinition/DevDaysIGtutorial-Specimen" />
+  </profile>
+  <rest>
+    <mode value="client" />
+     <resource>
+      <type value="DiagnosticReport" />
+       <interaction>
+         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+           <valueCode value="SHALL"/>
+         </extension>
+         <code value="search-type"/>
+         <documentation value="Allows discovery of existing diagnosticreport resources using different search criteria"/>
+       </interaction>
+       <interaction>
+         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+           <valueCode value="SHALL"/>
+         </extension>
+         <code value="read"/>
+         <documentation value="Allows retrieval of a specific diagnosticreport by id"/>
+       </interaction>
+       <interaction>
+         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+           <valueCode value="SHOULD"/>
+         </extension>
+         <code value="history-instance"/>
+         <documentation value="Allows review of changes to diagnosticreport instance over time"/>
+       </interaction>
+       <interaction>
+         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+           <valueCode value="SHOULD"/>
+         </extension>
+         <code value="vread"/>
+         <documentation value="Allows retrieval of a historical version of diagnosticreport instance"/>
+       </interaction>
+       <searchParam>
+         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+           <valueCode value="SHALL"/>
+         </extension>
+         <name value="patient"/>
+         <definition value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-Patient"/>
+         <type value="reference"/>
+       </searchParam>
+       <searchParam>
+         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+           <valueCode value="SHALL"/>
+         </extension>
+         <name value="category"/>
+         <definition value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-Category"/>
+         <type value="token"/>
+       </searchParam>
+       <searchParam>
+         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+           <valueCode value="SHALL"/>
+         </extension>
+         <name value="code"/>
+         <definition value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-Code"/>
+         <type value="token"/>
+       </searchParam>
+       <searchParam>
+         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+           <valueCode value="SHALL"/>
+         </extension>
+         <name value="date"/>
+         <definition value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-Date"/>
+         <type value="date"/>
+         <documentation value="The server SHALL support the date search modifiers &#39;ge&#39;,&#39;le&#39;,&#39;gt&#39;, and &#39;lt&#39;"/>
+       </searchParam>
+    </resource>
+    <resource>
+      <type value="Observation"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+        <documentation value="Allows discovery of existing   results observation, smokingstatus, and vitals signs observation using different search criteria"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+        <documentation value="Allows retrieval of a specific   results observation, smokingstatus, and vitals signs observation by id"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="history-instance"/>
+        <documentation value="Allows review of changes to   results observation, smokingstatus, and vitals signs observation over time"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="vread"/>
+        <documentation value="Allows retrieval of a historical version of a   results observation, smokingstatus, and vitals signs observation instance"/>
+      </interaction>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-Patient"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="category"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Organization-Category"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="code"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Organization-Code"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Organization-Date"/>
+        <type value="date"/>
+        <documentation value="The server SHALL support the date search modifiers &#39;ge&#39;,&#39;le&#39;,&#39;gt&#39;, and &#39;lt&#39;"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Specimen"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+        <documentation value="Allows discovery of existing   results observation, smokingstatus, and vitals signs observation using different search criteria"/>
+      </interaction>
+    </resource>
+  </rest>
+</CapabilityStatement>
