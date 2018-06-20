@@ -1,19 +1,19 @@
-## Welcome
+# Welcome
 
-This is the front page of a dummy Implementation Guide, part of the 2017 FHIR DevDays tutorial about Implementation Guides tooling.
+This is the front page of a dummy Implementation Guide, part of the 2018 FHIR DevDays tutorial about Implementation Guides tooling.
 
 On this website you can find all information that you need for implementing this FHIR project.
 
-### Audience
+## Audience
 This guide is designed for use by analysts and developers who require guidance on FHIR resources, elements and specific extensions relative to the Norwegian context. Users of this guide are expected to be familiar with the [FHIR specification][spec] and resource processing. This website is not intended to be a tutorial on that subject.
 
-### Conventions
+## Conventions
 This guide adheres to the following conventions:
 
 - The guide is constructed assuming the implementer has access to the [FHIR Specification][spec]. Although some information from the standard is included in this implementation guide, much information from the standard has not been repeated here.
 - The guide is constructed assuming the implementer SHALL conform to the [FHIR RESTful API][rest]
 
-### Contents
+## Contents
 
 - **Use Case:** Describes the use case that is covered on this website.
 
