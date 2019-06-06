@@ -8,7 +8,7 @@
     <experimental value="false"/>
     <description value="DevDaysIGtutorial SearchParameter to filter on Observation.method qualifier. The method qualifier is given in an extension, hence the reason for this custom search parameter."/>
     <code value="method-qualifier"/>
-    <base value="observation"/>
+    <base value="Observation"/>
     <type value="token"/>
     <expression value="Observation.method.extension('http://devdays-example-ig.com/fhir/StructureDefinition/DevDaysIGtutorial-observation-method-qualifier')"/>
 </SearchParameter>

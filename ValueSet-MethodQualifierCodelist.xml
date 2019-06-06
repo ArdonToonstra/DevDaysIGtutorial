@@ -9,7 +9,7 @@
     <status value="active"/>
     <experimental value="false"/>
     <publisher value="Firely"/>
-    <description value="Example Method Qualifier Codelist."/>
+    <description value="Example Method Qualifier Codelist with dummy codes."/>
     <immutable value="false"/>
     <compose>
         <include>
