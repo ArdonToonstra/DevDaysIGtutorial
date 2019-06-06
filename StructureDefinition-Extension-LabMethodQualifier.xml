@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="DevDaysIGtutorial-observation-method-qualifier" />
+  <url value="http://devdays-example-ig.com/fhir/StructureDefinition/DevDaysIGtutorial-observation-method-qualifier" />
+  <version value="1.0.1" />
+  <name value="DevDaysIGtutorialObservationMethodQualifier" />
+  <status value="draft" />
+  <description value="DevDaysIGtutorial-observation-method-qualifier" />
+  <copyright value="CC0" />
+  <fhirVersion value="4.0.0" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Observation.method" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Optional Extensions Element" />
+      <definition value="Optional Extension Element - found in all resources." />
+      <max value="1" />
+      <base>
+        <path value="Extension" />
+        <max value="1" />
+      </base>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.valueCodeableConcept" />
+      <min value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://devdays-example-ig.com/fhir/ValueSet/DevDaysIGtutorial-MethodQualifierCodelist" />
+      </binding>
+    </element>
+    <element id="Extension.value[x].coding">
+      <path value="Extension.valueCodeableConcept.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.value[x].coding.system">
+      <path value="Extension.valueCodeableConcept.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Extension.value[x].coding.code">
+      <path value="Extension.valueCodeableConcept.coding.code" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>

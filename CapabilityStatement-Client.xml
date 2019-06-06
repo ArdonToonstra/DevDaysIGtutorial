@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/capabilitystatement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/capabilitystatement.xsd">
+  <url value="http://devdays-example-ig.com/fhir/CapabilityStatement/DevDaysIGtutorial-clientcapabilities" />
+  <version value="2.0" />
+  <name value="DevDaysIGtutorial - client capabilities" />
+  <status value="active" />
+  <date value="2019-06-10" />
+  <publisher value="Firely" />
+  <contact>
+    <name value="Firely" />
+    <telecom>
+      <system value="email" />
+      <value value="info@fire.ly" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="This CapabilityStatement describes the minimal requirements for a client." />
+  <copyright value="CC0" />
+  <kind value="requirements" />
+  <fhirVersion value="4.0.0" />
+  <format value="xml" />
+  <format value="json" />
+  <rest>
+    <mode value="client" />
+    <resource>
+      <type value="Observation"/>
+      <profile value="http://devdays-example-ig.com/fhir/StructureDefinition/DevDaysIGtutorial-Observation"/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+        <documentation value="Allows discovery of existing results observation using different search criteria"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+        <documentation value="Allows retrieval of a specific results observation by id"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="history-instance"/>
+        <documentation value="Allows review of changes to results observation over time"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="vread"/>
+        <documentation value="Allows retrieval of a historical version of a results observation instance"/>
+      </interaction>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Observation-Patient"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="category"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Organization-Category"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="code"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Organization-Code"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <name value="date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Organization-Date"/>
+        <type value="date"/>
+        <documentation value="The server SHALL support the date search modifiers &#39;ge&#39;,&#39;le&#39;,&#39;gt&#39;, and &#39;lt&#39;"/>
+      </searchParam>
+    </resource>
+  </rest>
+</CapabilityStatement>

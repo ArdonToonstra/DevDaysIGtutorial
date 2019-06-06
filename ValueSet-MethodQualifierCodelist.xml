@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/valueset.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/valueset.xsd">
+    <id value="DevDaysIGtutorial-MethodQualifierCodelist"/>
+    <url value="http://devdays-example-ig.com/fhir/ValueSet/DevDaysIGtutorial-MethodQualifierCodelist"/>
+    <version value="1.0.0"/>
+    <name value="MethodQualifierCodelist"/>
+    <title value="MethodQualifierCodelist"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="Firely"/>
+    <description value="Example Method Qualifier Codelist."/>
+    <immutable value="false"/>
+    <compose>
+        <include>
+            <system value="http://example-Tx.org"/>
+            <concept>
+                <code value="QualifierCode01"/>
+                <display value="Method Qualifier code 01"/>
+            </concept>
+            <concept>
+                <code value="QualifierCode02"/>
+                <display value="Method Qualifier code 02"/>
+            </concept>
+            <concept>
+                <code value="QualifierCode03"/>
+                <display value="Method Qualifier code 03"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>
