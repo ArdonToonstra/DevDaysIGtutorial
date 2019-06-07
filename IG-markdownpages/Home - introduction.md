@@ -1,6 +1,6 @@
 # Welcome
 
-This is the front page of a dummy Implementation Guide, part of the 2018 FHIR DevDays tutorial about Implementation Guides tooling.
+This is the front page of a dummy Implementation Guide, part of the FHIR DevDays tutorial about Implementation Guides tooling.
 
 On this website you can find all information that you need for implementing this FHIR project.
 
