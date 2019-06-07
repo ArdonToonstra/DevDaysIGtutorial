@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/observation.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Observation xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/observation.xsd">
+    <id value="example-invalid-labobservation-01"/>
+    <meta>
+        <profile value="http://devdays-example-ig.com/fhir/StructureDefinition/DevDaysIGtutorial-Observation"/>
+    </meta>
+    <identifier>
+        <system value="https://devdays-example-ig.com/NamingSystem/labObservarionIdentifier"/>
+        <value value="0a7c96cc-58ee-41da-8c56-f03dc8df3de1"/>
+    </identifier>
+    <status value="final"/>
+    <code> 
+        <coding> 
+            <!-- wrong system - should be loinc -->
+            <system value="http://snomed.sct"/> 
+            <code value="718-7"/> 
+            <display value="Hemoglobin [Mass/volume] in Blood"/> 
+        </coding> 
+    </code> 
+    <subject>
+        <reference value="Patient/example-valid-labpatient-01"/>
+        <display value="Mr. Pietje Puk"/>
+    </subject>
+    <!-- wrong datatype, should be effectiveDateTime -->
+    <effectivePeriod>
+        <start value="2019-05-23T12:00:00+02:00"/>
+    </effectivePeriod> 
+    <issued value="2019-05-24T10:00:00+02:00"/>
+    <valueQuantity>
+        <value value="7.2"/> 
+        <unit value="g/dl"/> 
+        <system value="http://unitsofmeasure.org"/> 
+        <code value="g/dL"/> 
+    </valueQuantity>
+    <interpretation> 
+        <coding> 
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/> 
+            <code value="L"/> 
+            <display value="Low"/> 
+        </coding> 
+    </interpretation>
+    <method>
+        <extension url="http://devdays-example-ig.com/fhir/StructureDefinition/DevDaysIGtutorial-observation-method-qualifier">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://example-Tx.org"/>
+                    <!-- incorrect code should be QualifierCode01   -->
+                    <code value="Code01"/>
+                    <display value="Method Qualifier code 01"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="9564003"/>
+            <display value="Complete blood count with white cell differential, automated"/>
+        </coding>
+    </method>
+    <referenceRange> 
+        <low> 
+            <value value="7.5"/> 
+            <unit value="g/dl"/> 
+            <system value="http://unitsofmeasure.org"/> 
+            <code value="g/dL"/> 
+        </low> 
+        <high> 
+            <value value="10"/> 
+            <unit value="g/dl"/> 
+            <system value="http://unitsofmeasure.org"/> 
+            <code value="g/dL"/> 
+        </high> 
+    </referenceRange> 
+</Observation>

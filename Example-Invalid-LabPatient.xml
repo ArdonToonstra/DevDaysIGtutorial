@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://hl7.org/fhir/patient.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/patient.xsd">
+    <id value="example-invalid-labpatient-01"/>
+    <meta>
+        <profile value="http://devdays-example-ig.com/fhir/StructureDefinition/DevDaysIGtutorial-Patient"/>
+    </meta>
+    <identifier>
+        <!-- Missing system -->
+        <value value="1142dd8e-494d-4a01-823c-047b8bdb35c8"/>
+    </identifier>
+    <!-- incorrect active element-->
+    <active value="true"/>
+    <name>
+        <text value="Mr. Pietje Puk"/>
+        <family value="Puk"/>
+        <given value="Pietje"/>
+    </name>
+    <gender value="male"/>
+    <birthDate value="1981-08-20"/>
+</Patient>

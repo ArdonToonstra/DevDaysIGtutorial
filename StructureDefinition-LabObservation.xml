@@ -32,9 +32,6 @@
       <path value="Observation.code" />
       <mustSupport value="true" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ObservationCode" />
-        </extension>
         <strength value="required" />
       </binding>
     </element>
@@ -137,7 +134,7 @@
       <sliceName value="valueCodeableConcept" />
     </element>
     <element id="Observation.method.extension:methodQualifier.value[x]:valueCodeableConcept:valueCodeableConcept">
-      <path value="Observation.method.extension.value[x]" />
+      <path value="Observation.method.extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
     </element>
     <element id="Observation.method.coding">
