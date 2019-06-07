@@ -31,9 +31,6 @@
     <element id="Observation.code">
       <path value="Observation.code" />
       <mustSupport value="true" />
-      <binding>
-        <strength value="required" />
-      </binding>
     </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
@@ -124,16 +121,13 @@
       <path value="Observation.method.extension" />
       <sliceName value="methodQualifier" />
       <min value="1" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://devdays-example-ig.com/fhir/StructureDefinition/DevDaysIGtutorial-observation-method-qualifier" />
       </type>
     </element>
     <element id="Observation.method.extension:methodQualifier.value[x]:valueCodeableConcept">
-      <path value="Observation.method.extension.value[x]" />
-      <sliceName value="valueCodeableConcept" />
-    </element>
-    <element id="Observation.method.extension:methodQualifier.value[x]:valueCodeableConcept:valueCodeableConcept">
       <path value="Observation.method.extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
     </element>
