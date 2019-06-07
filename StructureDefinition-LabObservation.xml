@@ -126,6 +126,16 @@
         <profile value="http://devdays-example-ig.com/fhir/StructureDefinition/DevDaysIGtutorial-observation-method-qualifier" />
       </type>
     </element>
+    <element id="Observation.method.extension:methodQualifier.value[x]">
+      <path value="Observation.method.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+    </element>
     <element id="Observation.method.extension:methodQualifier.valueCodeableConcept:valueCodeableConcept">
       <path value="Observation.method.extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
