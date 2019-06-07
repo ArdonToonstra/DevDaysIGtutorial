@@ -20,28 +20,11 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
-      <short value="Optional Extensions Element" />
-      <definition value="Optional Extension Element - found in all resources." />
       <max value="1" />
-      <base>
-        <path value="Extension" />
-        <max value="1" />
-      </base>
-      <constraint>
-        <key value="ext-1" />
-        <severity value="error" />
-        <human value="Must have either extensions or value[x], not both" />
-        <expression value="extension.exists() != value.exists()" />
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
-      </constraint>
-      <mapping>
-        <identity value="rim" />
-        <map value="N/A" />
-      </mapping>
     </element>
-    <element id="Extension.value[x]">
+    <element id="Extension.value[x]:valueCodeableConcept">
       <path value="Extension.valueCodeableConcept" />
-      <min value="1" />
+      <sliceName value="valueCodeableConcept" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -50,16 +33,16 @@
         <valueSet value="http://devdays-example-ig.com/fhir/ValueSet/DevDaysIGtutorial-MethodQualifierCodelist" />
       </binding>
     </element>
-    <element id="Extension.value[x].coding">
+    <element id="Extension.value[x]:valueCodeableConcept.coding">
       <path value="Extension.valueCodeableConcept.coding" />
       <min value="1" />
       <max value="1" />
     </element>
-    <element id="Extension.value[x].coding.system">
+    <element id="Extension.value[x]:valueCodeableConcept.coding.system">
       <path value="Extension.valueCodeableConcept.coding.system" />
       <min value="1" />
     </element>
-    <element id="Extension.value[x].coding.code">
+    <element id="Extension.value[x]:valueCodeableConcept.coding.code">
       <path value="Extension.valueCodeableConcept.coding.code" />
       <min value="1" />
     </element>

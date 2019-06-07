@@ -50,6 +50,24 @@
                     <display value="Method Qualifier code 01"/>
                 </coding>
             </valueCodeableConcept>
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://example-Tx.org"/>
+                    <!-- incorrect code should be QualifierCode01   -->
+                    <code value="Code01"/>
+                    <display value="Method Qualifier code 01"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <extension url="http://devdays-example-ig.com/fhir/StructureDefinition/DevDaysIGtutorial-observation-method-qualifier">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://example-Tx.org"/>
+                    <!-- incorrect code should be QualifierCode01   -->
+                    <code value="Code01"/>
+                    <display value="Method Qualifier code 01"/>
+                </coding>
+            </valueCodeableConcept>
         </extension>
         <coding>
             <system value="http://snomed.info/sct"/>

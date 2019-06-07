@@ -121,15 +121,15 @@
       <path value="Observation.method.extension" />
       <sliceName value="methodQualifier" />
       <min value="1" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://devdays-example-ig.com/fhir/StructureDefinition/DevDaysIGtutorial-observation-method-qualifier" />
       </type>
     </element>
-    <element id="Observation.method.extension:methodQualifier.value[x]:valueCodeableConcept">
+    <element id="Observation.method.extension:methodQualifier.valueCodeableConcept:valueCodeableConcept">
       <path value="Observation.method.extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
+      <min value="1" />
     </element>
     <element id="Observation.method.coding">
       <path value="Observation.method.coding" />
