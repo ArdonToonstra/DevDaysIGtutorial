@@ -1426,6 +1426,15 @@
       <type>
         <code value="dateTime" />
       </type>
+      <type>
+        <code value="Period" />
+      </type>
+      <type>
+        <code value="Timing" />
+      </type>
+      <type>
+        <code value="instant" />
+      </type>
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -2391,9 +2400,6 @@
     <element id="Observation.method.extension:methodQualifier.url">
       <path value="Observation.method.extension.url" />
       <representation value="xmlAttr" />
-      <short value="identifies the meaning of the extension" />
-      <definition value="Source of the definition for the extension code - a logical name or a URL." />
-      <comment value="The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension." />
       <min value="1" />
       <max value="1" />
       <base>
@@ -4059,9 +4065,6 @@
       <path value="Observation.effective[x]" />
       <sliceName value="effectiveDateTime" />
       <min value="1" />
-      <type>
-        <code value="dateTime" />
-      </type>
       <mustSupport value="true" />
     </element>
     <element id="Observation.value[x]:valueQuantity">
@@ -4119,7 +4122,6 @@
       <path value="Observation.method.extension" />
       <sliceName value="methodQualifier" />
       <min value="1" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://devdays-example-ig.com/fhir/StructureDefinition/DevDaysIGtutorial-observation-method-qualifier" />
