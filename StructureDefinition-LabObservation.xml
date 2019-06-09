@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="DevDaysIGtutorial-Observation" />
   <url value="http://devdays-example-ig.com/fhir/StructureDefinition/DevDaysIGtutorial-Observation" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="DevDaysIGtutorialObservation" />
   <title value="DevDaysIGtutorial-Observation" />
   <status value="active" />
