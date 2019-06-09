@@ -12,8 +12,7 @@
     <status value="final"/>
     <code> 
         <coding> 
-            <!-- wrong system - should be loinc -->
-            <system value="http://snomed.sct"/> 
+            <system value="http://loinc.org"/> 
             <code value="718-7"/> 
             <display value="Hemoglobin [Mass/volume] in Blood"/> 
         </coding> 
@@ -44,18 +43,7 @@
             <valueCodeableConcept>
                 <coding>
                     <system value="http://example-Tx.org"/>
-                    <!-- incorrect code should be QualifierCode01   -->
-                    <code value="Code01"/>
-                    <display value="Method Qualifier code 01"/>
-                </coding>
-            </valueCodeableConcept>
-        </extension>
-        <extension url="http://devdays-example-ig.com/fhir/StructureDefinition/DevDaysIGtutorial-observation-method-qualifier">
-            <valueCodeableConcept>
-                <coding>
-                    <system value="http://example-Tx.org"/>
-                    <!-- incorrect code should be QualifierCode01   -->
-                    <code value="Code01"/>
+                    <code value="QualifierCode01"/>
                     <display value="Method Qualifier code 01"/>
                 </coding>
             </valueCodeableConcept>
